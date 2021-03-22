@@ -45,7 +45,7 @@ def fdl(url, depth):
 	#Checks depth and calls fdl(url, depth) on good links
 	if depth > 0:
 		for link in gLinks:
-		fdl(link, depth-1)
+			fdl(link, depth-1)
 
 
 if __name__ == "__main__":
@@ -63,6 +63,4 @@ if __name__ == "__main__":
 			except:
 				print("ERROR: DEPTH INVALID")
 				exit(1)
-		fdl(url, depth)
-	else:
-		print("ERROR: find-dead-links [-<depth] <URL>")	
+	fdl(url, depth)
